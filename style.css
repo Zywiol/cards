@@ -1,11 +1,12 @@
 :root {
-    --bg-dark: #0a0a0c;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --accent-primary: #6366f1;
-    --accent-secondary: #a855f7;
-    --text-primary: #ffffff;
-    --text-secondary: rgba(255, 255, 255, 0.7);
+    --bg-dark: #1b3b33;
+    --bg-light: #fcfaf2;
+    --card-bg: rgba(15, 41, 34, 0.9);
+    --card-border: rgba(197, 160, 89, 0.4);
+    --accent-primary: #c5a059;
+    --accent-secondary: #e8d5b1;
+    --text-primary: #fcfaf2;
+    --text-secondary: rgba(252, 250, 242, 0.7);
     --font-main: 'Outfit', sans-serif;
 }
 
@@ -33,8 +34,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #0a0a0c 100%);
+    background: radial-gradient(circle at 50% 50%, #2a4d44 0%, #0a1a16 100%);
     z-index: -2;
+}
+
+/* Let's make it actually lighter as requested */
+body {
+    background-color: #122621;
+    background-image: linear-gradient(135deg, #1b3b33 0%, #0a1a16 100%);
 }
 
 .blobs {
@@ -55,29 +62,60 @@ body {
 }
 
 .blob-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-primary);
+    width: 500px;
+    height: 500px;
+    background: #1b3b33;
     top: -100px;
     left: -100px;
+    animation-duration: 25s;
 }
 
 .blob-2 {
-    width: 500px;
-    height: 500px;
-    background: var(--accent-secondary);
+    width: 600px;
+    height: 600px;
+    background: #c5a059;
     bottom: -150px;
     right: -150px;
     animation-delay: -5s;
+    opacity: 0.15;
 }
 
 .blob-3 {
-    width: 300px;
-    height: 300px;
-    background: #ec4899;
-    top: 40%;
+    width: 400px;
+    height: 400px;
+    background: #0f2922;
+    top: 30%;
     left: 60%;
     animation-delay: -10s;
+}
+
+.blob-4 {
+    width: 350px;
+    height: 350px;
+    background: #d4af37;
+    bottom: 20%;
+    left: 10%;
+    opacity: 0.1;
+    animation-delay: -15s;
+}
+
+.blob-5 {
+    width: 450px;
+    height: 450px;
+    background: #2a4d44;
+    top: 10%;
+    right: 20%;
+    animation-delay: -2s;
+}
+
+.blob-6 {
+    width: 300px;
+    height: 300px;
+    background: #e8d5b1;
+    bottom: 40%;
+    right: 10%;
+    opacity: 0.08;
+    animation-delay: -8s;
 }
 
 @keyframes move {
@@ -207,7 +245,7 @@ body {
     font-weight: 800;
     text-align: center;
     color: #fff;
-    text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    text-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
     animation: fadeInScale 0.5s ease forwards;
 }
 
@@ -254,8 +292,9 @@ body {
 
 .reset-btn:hover {
     background: var(--accent-primary);
+    color: var(--bg-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 10px 15px -3px rgba(197, 160, 89, 0.4);
 }
 
 /* --- Responsive --- */
