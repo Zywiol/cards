@@ -237,17 +237,19 @@ body {
 }
 
 .reset-btn {
-    margin-top: 24px;
-    padding: 12px 24px;
+    margin-top: 32px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
     background: transparent;
-    border: 1px solid var(--accent-primary);
+    border: 2px solid var(--accent-primary);
     color: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
     cursor: pointer;
     font-family: inherit;
-    font-weight: 600;
+    font-weight: 800;
     transition: all 0.3s ease;
     align-self: center;
+    width: fit-content;
 }
 
 .reset-btn:hover {
