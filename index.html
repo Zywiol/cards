@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unofficial EA Title Generator | Reveal Your Hidden Role</title>
+    <meta name="description" content="Discover your true, unofficial Executive Assistant title. Between managing calendars and solving crises, what's your real name? Click to flip and find out.">
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <div class="card-wrapper" id="card-trigger">
+            <div class="card" id="card">
+                <!-- Front Side -->
+                <div class="card-face card-front">
+                    <div class="content">
+                        <h1 class="eyebrow">Let’s be honest…</h1>
+                        <p class="headline">“Executive Assistant” <span>doesn’t quite cover it.</span></p>
+                        
+                        <div class="description">
+                            <p>Between managing calendars, solving last-minute crises, and keeping everything (and everyone) on track – there’s always another title hiding underneath.</p>
+                        </div>
+                        
+                        <div class="cta">
+                            <p>Click the card to reveal yours.</p>
+                            <span class="sub-cta">It might feel… a little too accurate.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="card-face card-back">
+                    <div class="content">
+                        <h2 class="eyebrow">Your Unofficial EA Title:</h2>
+                        
+                        <div class="title-display">
+                            <h3 id="random-title" class="generated-title">...</h3>
+                        </div>
+                        
+                        <p class="post-reveal">Accurate? We had a feeling 😉</p>
+                        
+                        <div class="social-share">
+                            <p>Share it on <strong>#ea_social</strong> and compare with others – because some titles are just too real not to be seen.</p>
+                        </div>
+
+                        <button class="reset-btn" id="reset-btn">Try another one</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
