@@ -63,6 +63,7 @@ const titleDisplay = document.getElementById('random-title');
 const resetBtn = document.getElementById('reset-btn');
 
 let isFlipped = false;
+let resetTimeout;
 
 function getRandomTitle() {
     return titles[Math.floor(Math.random() * titles.length)];
@@ -70,6 +71,9 @@ function getRandomTitle() {
 
 function handleFlip() {
     if (!isFlipped) {
+        // Clear timeout if user flips again quickly before dots reset
+        clearTimeout(resetTimeout);
+        
         // Pick title before flipping
         titleDisplay.textContent = getRandomTitle();
         card.classList.add('flipped');
@@ -83,7 +87,7 @@ function handleReset(e) {
     isFlipped = false;
     
     // Clear title after flip animation back (optional)
-    setTimeout(() => {
+    resetTimeout = setTimeout(() => {
         titleDisplay.textContent = "...";
     }, 800);
 }
